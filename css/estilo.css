@@ -3,6 +3,15 @@
     margin-bottom: 0;
     border-radius: 0;
 }
+article{
+  background-color: #94C9A9;
+  color: #DC4D53;
+
+}
+header{
+  background-color: #2E1F27;
+  color: #94C9A9;
+}
 
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 .row.content {height: 450px}
@@ -16,8 +25,8 @@
 
 /* Set black background color, white text and some padding */
 footer {
-    background-color: #555;
-    color: white;
+    background-color: #2E1F27;
+    color: #94C9A9;
     padding: 15px;
 }
 
@@ -27,5 +36,7 @@ footer {
         height: auto;
         padding: 15px;
     }
-    .row.content {height:auto;}
+    .row.content {
+      height:auto;
+    }
 }
