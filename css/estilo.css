@@ -1,10 +1,19 @@
 
 @import url('https://fonts.googleapis.com/css?family=PT+Serif');
 
+article{
+  background-color: #94C9A9;
+  color: #41455C;
 
+}
 body {
     font-family: 'PT Serif', serif;
     background: #fafafa;
+}
+footer {
+    background-color: #2E1F27;
+    color: #DC4D53;
+    padding: 15px;
 }
 
 p {
