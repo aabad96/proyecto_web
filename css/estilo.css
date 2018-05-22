@@ -2,10 +2,12 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Serif');
 
 
-body {
+/*body {
     font-family: 'PT Serif', serif;
     background: #fafafa;
 }
+*/
+
 
 p {
     font-family: 'PT Serif', serif;
@@ -156,8 +158,17 @@ a.article, a.article:hover {
 
 h1{
     text-align: center;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
+}
+h2{
+  font-size: 50px;
+  font-weight: inherit;
+  color: #41455C
+}
+p{
+  font-weight: inherit;
+  color: #41455C
 }
 article{
   background-color: #94C9A9;
@@ -192,12 +203,7 @@ header{
     height: 60px;
     width: 60px;
 }
-
-textarea{
-    width: 350px;
-    height: 200px;
-}
-
+=======
 /* Set black background color, white text and some padding */
 footer {
     background-color: #2E1F27;
@@ -215,3 +221,4 @@ footer {
       height:auto;
     }
 }
+>>>>>>> e9080c8a4f94f001bc900f506b1e0f9bc258a905
