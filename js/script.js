@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('#dismiss, .oscurecer').on('click', function () {
+    $('#quitar, .oscurecer').on('click', function () {
         $('#barra').removeClass('active');
         $('.oscurecer').fadeOut();
     });

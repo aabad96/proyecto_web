@@ -3,19 +3,22 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¿Cómo funciona?</title>
+    <title>Nombre comercial</title>
+
     <!--Jquery JS-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- Nuestro CSS -->
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
 <body>
+<div class="oscurecer"></div>
 <div class="menu">
     <!-- Sidebar Holder -->
     <nav id="barra">
-        <div id="dismiss">
+        <div id="quitar">
             <i class="glyphicon glyphicon-arrow-left"></i>
         </div>
 
@@ -23,76 +26,117 @@
             <h3>MENÚ</h3>
         </div>
 
-        <ul class="componentes">
+        <ul id="lista" class="componentes">
             <!--active de bootstrap-->
             <li>
                 <a href="index.html">Inicio</a>
                 <a href="quien.html">¿Quiénes somos?</a>
             </li>
             <li class="active">
-                <a href="como.html">¿Cómo funciona?</a>
+                <a href="#">¿Cómo funciona?</a>
             </li>
             <li>
                 <a href="donacion.html">Donaciones</a>
                 <a href="contribuir.html">Contribuir con extensión</a>
             </li>
-            <p>--Extensiones--</p>
-            <li>
-                <a href="#">Imágenes</a>
-                <a href="#">Audio</a>
-                <a href="#">Video</a>
-                <a href="#">Texto</a>
-                <a href="#">Archivos Comprimidos</a>
-                <a href="#">BBDD</a>
-                <a href="#">Sistema</a>
-                <a href="#">Otros</a>
-                <a href="#">Web</a>
+            <li><a href="#">Extensiones &raquo</a>
+                <ul>
+                    <li>
+                        <a href="#">Imágenes</a>
+                        <a href="#">Audio</a>
+                        <a href="#">Video</a>
+                        <a href="#">Texto</a>
+                        <a href="#">Archivos Comprimidos</a>
+                        <a href="#">BBDD</a>
+                        <a href="#">Sistema</a>
+                        <a href="#">Otros</a>
+                        <a href="#">Web</a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </nav>
-
-    <!-- Page Content Holder -->
-    <div id="contenido">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" id="esconder" class="btn btn-info navbar-btn">
-                        <i class="glyphicon glyphicon-align-left"></i>
-                        <span>Menú</span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <h1>WWW.EXTENSIONESGUIDE.COM</h1>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">
-                            <div style="float: left;">
-                                <img src="./img/cat.png" alt="Catalan" id="lanCat">
-                            </div>
-                        </a></li>
-                        <li><a href="#">
-                            <div style="float: left;">
-                                <img src="img/sp.png" alt="Español" id="lanEs">
-                            </div>
-                        </a></li>
-                        <li><a href="#">
-                            <div style="float: left;">
-                                <img src="img/en.png" alt="English" id="lanEn">
-                            </div>
-                        </a></li>
-                    </ul>
-                </div>
+</div>
+<!-- Page Content Holder -->
+<div id="content">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" id="esconder" class="btn btn-info navbar-btn">
+                    <i class="glyphicon glyphicon-align-left"></i>
+                    <span>Menú</span>
+                </button>
             </div>
-        </nav>
-
+            <div id="ocultar" class="blanco">
+                <h1>OpenSource</h1>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <h1 id="tituloCentral">OpenSource</h1>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">
+                        <div style="float: left;">
+                            <img src="./img/cat.png" alt="Catalan" id="lanCat">
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div style="float: left;">
+                            <img src="img/sp.png" alt="Español" id="lanEs">
+                        </div>
+                    </a></li>
+                    <li><a href="#">
+                        <div style="float: left;">
+                            <img src="img/en.png" alt="English" id="lanEn">
+                        </div>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container">
         <h1>¿Cómo funciona?</h1>
         <p>Nuestra tecnología se basa en....</p>
     </div>
-</div>
+<footer id="myFooter">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 myCols">
+                <h5>Get started</h5>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sign up</a></li>
+                    <li><a href="#">Downloads</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4 myCols">
+                <h5>About us</h5>
+                <ul>
+                    <li><a href="#">Company Information</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4 myCols">
+                <h5>Support</h5>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Help desk</a></li>
+                    <li><a href="#">Forums</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
+    <div class="social-networks">
+        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="google"><i class="fab fa-google-plus"></i></a>
+    </div>
+    <div class="footer-copyright">
+        <p>© 2018 Copyright</p>
+    </div>
 
-<div class="oscurecer"></div>
-
-
+</footer>
 
 <!-- Bootstrap Js CDN -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

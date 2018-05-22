@@ -2,12 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Serif');
 
 
-/*body {
+body {
     font-family: 'PT Serif', serif;
     background: #fafafa;
 }
-*/
-
 
 p {
     font-family: 'PT Serif', serif;
@@ -55,23 +53,53 @@ a, a:hover, a:focus {
     left: -250px;
     height: 100vh;
     z-index: 999;
-    background: #7386D5;
+    background: #404B69;
     color: #fff;
     transition: all 0.3s;
     overflow-y: scroll;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
 }
 
+
 #barra.active {
     left: 0;
 }
 
-#dismiss {
+/* Despliegue lista extensiones */
+ul#lista li:hover > ul
+{
+    /*Los siguientes 2 estilos son los mas importantes para el efecto*/
+    visibility:visible;
+    opacity:1;
+}
+
+ul#lista ul, ul#lista ul li ul {
+    margin: 0;
+    padding: 0;
+    /*mantienen escondido el menu*/
+    visibility:hidden;
+    opacity:0;
+    position: absolute;
+    z-index: 99999;
+    width:180px;
+    box-shadow:1px 1px 3px #ccc;
+    /* Efectos con css3 de apertura*/
+    -webkit-transition:opacity 0.2s linear, visibility 0.2s linear;
+    -moz-transition:opacity 0.2s linear, visibility 0.2s linear;
+    -o-transition:opacity 0.2s linear, visibility 0.2s linear;
+    transition:opacity 0.2s linear, visibility 0.2s linear;
+}
+
+#esconder{
+    background-color: #404B69 ;
+}
+
+#quitar {
     width: 35px;
     height: 35px;
     line-height: 35px;
     text-align: center;
-    background: #7386D5;
+    background: #283149;
     position: absolute;
     top: 10px;
     right: 10px;
@@ -80,9 +108,9 @@ a, a:hover, a:focus {
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
-#dismiss:hover {
+#quitar:hover {
     background: #fff;
-    color: #7386D5;
+    color: #283149;
 }
 
 .oscurecer {
@@ -96,7 +124,7 @@ a, a:hover, a:focus {
 
 #barra .barra-header {
     padding: 20px;
-    background: #6d7fcc;
+    background: #404B69;
 }
 
 #barra ul.components {
@@ -115,19 +143,26 @@ a, a:hover, a:focus {
     display: block;
 }
 #barra ul li a:hover {
-    color: #7386D5;
+    color: #404B69;
     background: #fff;
 }
 
 #barra ul li.active > a, a[aria-expanded="true"] {
     color: #fff;
-    background: #6d7fcc;
+    background: #283149;
 }
 
 #barra p{
-    background-color: darkslateblue;
+    color: red;
 }
 
+#barra ul{
+    list-style-type: none;
+}
+
+#barra ul ul {
+    list-style-type: none;
+}
 
 a[data-toggle="collapse"] {
     position: relative;
@@ -136,7 +171,7 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #6d7fcc;
+    background: #404B69;
 }
 
 ul.CTAs {
@@ -156,19 +191,10 @@ a.article, a.article:hover {
     color: #fff !important;
 }
 
-h1{
+#tituloCentral{
     text-align: center;
-    font-size: 50px;
+    font-size: 80px;
     font-weight: bold;
-}
-h2{
-  font-size: 50px;
-  font-weight: inherit;
-  color: #41455C
-}
-p{
-  font-weight: inherit;
-  color: #41455C
 }
 article{
   background-color: #94C9A9;
@@ -194,7 +220,6 @@ header{
     right: 0;
 }
 
-
 .extension h2{
     font-size: 50px;
 }
@@ -204,12 +229,110 @@ header{
     height: 60px;
     width: 60px;
 }
-=======
+
+textarea{
+    width: 350px;
+    height: 200px;
+}
+
 /* Set black background color, white text and some padding */
 footer {
     background-color: #2E1F27;
     color: #DC4D53;
     padding: 15px;
+}
+
+.blanco{
+	color: white;
+	text-align: left;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+/*Footer css*/
+
+#myFooter {
+    background-color: #283149 ;
+    color:white;
+}
+
+#myFooter .footer-copyright{
+    background-color: #283149;
+    padding-top:3px;
+    padding-bottom:3px;
+    text-align: center;
+}
+
+#myFooter .footer-copyright p{
+    margin:10px;
+    color: #ccc;
+}
+
+#myFooter ul{
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.7;
+
+}
+
+#myFooter h5{
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#myFooter a{
+    color:#d2d1d1;
+    text-decoration: none;
+}
+
+#myFooter a:hover, #myFooter a:focus{
+    text-decoration: none;
+    color:white;
+}
+
+#myFooter .myCols{
+    text-align: center;
+}
+
+#myFooter .social-networks{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 38px;
+}
+
+#myFooter .social-networks a{
+    font-size: 32px;
+    margin-right: 5px;
+    margin-left: 5px;
+    color: #f9f9f9;
+    padding: 10px;
+    transition: 0.2s;
+}
+
+#myFooter .social-networks a:hover{
+    text-decoration: none;
+
+}
+
+#myFooter .facebook:hover{
+    color:#3b5998;
+}
+
+#myFooter .google:hover{
+    color:#ef1a1a;
+}
+
+#myFooter .twitter:hover{
+    color: #00aced;
+}
+
+
+@media screen and (max-width: 767px){
+    #myFooter {
+        text-align: center;
+    }
 }
 
 /* On small screens, set height to 'auto' for sidenav and grid */
@@ -221,4 +344,11 @@ footer {
     .row.content {
       height:auto;
     }
+    #donar{
+        height: 90px;
+        width: 300px;
+    }
+	#ocultar{
+		color:black;
+	}
 }
