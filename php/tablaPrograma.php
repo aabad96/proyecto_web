@@ -9,7 +9,7 @@
 	<?php
 	require('db.php');
 	$count=1;
-	$sel_query="Select nombre from categoria order by id;";
+	$sel_query="Select nombre from programa order by id;";
 	$result = mysqli_query($con,$sel_query);
 	while($row = mysqli_fetch_assoc($result)) { ?>
 	<tr>
