@@ -1,7 +1,7 @@
 <?php
 	require('db.php');
 	$count=1;
-	$sel_query="Select * from categoria order by id;";
+	$sel_query="Select * from programa order by id;";
 	$result = mysqli_query($con,$sel_query);
 	
 	// Se va a generar un JSON 
