@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenSource</title>
-
     <!--Jquery JS-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Bootstrap CSS -->
@@ -13,8 +12,9 @@
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-<div class="oscurecer"></div>
-<div class="menu">
+  <header>
+    <div class="oscurecer"></div>
+    <div class="menu">
     <!-- Sidebar Holder -->
     <nav id="barra">
         <div id="quitar">
@@ -57,7 +57,7 @@
     </nav>
 </div>
 <!-- Page Content Holder -->
-<div id="content">
+    <div id="content">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -75,7 +75,9 @@
         </div>
     </nav>
 </div>
-<div class="container">
+  </header>
+  <article>
+    <div class="container">
         <form action="/signup" method="post">
           <p>FORMULARIO: </p>
             <p>
@@ -119,10 +121,9 @@
                 <button type="reset">Limpiar Formulario</button>
             </p>
         </form>
-
     </div>
+  </article>
     <!-- Bootstrap Js CDN -->
-
     <footer id="myFooter">
         <div class="container">
             <div class="row">

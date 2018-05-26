@@ -4,7 +4,24 @@
 
 body {
     font-family: 'PT Serif', serif;
-    background: #fafafa;
+}
+/* ---------------------------------------------------
+   Estilo del article
+----------------------------------------------------- */
+article{
+  background-color: #D1B0A0;
+  color: #283149;
+
+}
+a.article, a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+/* ---------------------------------------------------
+   Estilo del header
+----------------------------------------------------- */
+header{
+  color: #283149;
 }
 
 p {
@@ -12,7 +29,7 @@ p {
     font-size: 1.3em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #2D2E40;
+    color: #283149;
 }
 
 a, a:hover, a:focus {
@@ -186,24 +203,11 @@ ul.CTAs a {
     margin-bottom: 5px;
 }
 
-a.article, a.article:hover {
-    background: #6d7fcc !important;
-    color: #fff !important;
-}
 
 #tituloCentral{
     text-align: center;
     font-size: 80px;
     font-weight: bold;
-}
-article{
-  background-color: #94C9A9;
-  color: #41455C;
-
-}
-header{
-  background-color: #2E1F27;
-  color: #94C9A9;
 }
 
 
@@ -242,10 +246,6 @@ textarea{
 	font-weight: bold;
 	font-size: 16px;
 }
-/*Header css*/
-/*  background-color: #1A1518;
-  color: white;
-}*/
 
 
 /* ---------------------------------------------------
