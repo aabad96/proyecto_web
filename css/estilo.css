@@ -12,7 +12,7 @@ p {
     font-size: 1.3em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999;
+    color: #2D2E40;
 }
 
 a, a:hover, a:focus {
@@ -236,30 +236,28 @@ textarea{
 }
 
 /* Set black background color, white text and some padding */
-footer {
-    background-color: #2E1F27;
-    color: #DC4D53;
-    padding: 15px;
-}
-
 .blanco{
 	color: white;
 	text-align: left;
 	font-weight: bold;
 	font-size: 16px;
 }
-
+/*Header css*/
+/*  background-color: #1A1518;
+  color: white;
+}*/
 /*Footer css*/
 
 #myFooter {
-    background-color: #283149 ;
-    color:white;
+  background-color: #1A1518;
+  color: white;
 }
 
 #myFooter .footer-copyright{
-    background-color: #283149;
-    padding-top:3px;
-    padding-bottom:3px;
+  background-color: #1A1518;
+  color: #white;
+    padding-top:2px;
+    padding-bottom:2px;
     text-align: center;
 }
 
@@ -283,7 +281,7 @@ footer {
 }
 
 #myFooter a{
-    color:#d2d1d1;
+    color:white;
     text-decoration: none;
 }
 
