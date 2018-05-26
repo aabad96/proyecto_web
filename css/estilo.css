@@ -53,7 +53,7 @@ a, a:hover, a:focus {
     left: -250px;
     height: 100vh;
     z-index: 999;
-    background: #404B69;
+    background-color: #404B69;
     color: #fff;
     transition: all 0.3s;
     overflow-y: scroll;
@@ -246,7 +246,11 @@ textarea{
 /*  background-color: #1A1518;
   color: white;
 }*/
-/*Footer css*/
+
+
+/* ---------------------------------------------------
+   Estilo del footer
+----------------------------------------------------- */
 
 #myFooter {
   background-color: #1A1518;
