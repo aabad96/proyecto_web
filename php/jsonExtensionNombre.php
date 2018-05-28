@@ -1,10 +1,10 @@
 <?php
-    if( isset($_GET['id']) ) {
-    	obtenerExtensiones($_GET['id']);
+    if( isset($_GET['name']) ) {
+    	obtenerExtensiones($_GET['name']);
     } else {
     	die("Solicitud no válida.");
     }
-	function obtenerExtensiones($id){
+	function obtenerExtensiones($name){
 	 //Cambia por los detalles de tu base datos
 	$dbserver = "18.191.39.0";
 	$dbuser = "publico";
@@ -16,8 +16,8 @@
 	if($con->connect_errno) {
                 die("No se pudo conectar a la base de datos");
 	}
-
-	$sel_query="Select * from extension where idCategoria like $id order by nombre;";
+	strtoupper($name);
+	$sel_query="Select * from extension where nombre like '%$name%' order by nombre";
 	$result = mysqli_query($con,$sel_query);
 
 	// Se va a generar un JSON con la la info:
