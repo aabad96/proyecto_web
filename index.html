@@ -18,86 +18,69 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     </head>
     <body>
-    <span class="ir-arriba icon-arrow-up"></span>
-    <div class="oscurecer"></div>
-        <div class="menu">
+      <header>
+        <span class="ir-arriba icon-arrow-up"></span>
+        <div class="oscurecer"></div>
+          <div class="menu">
             <!-- Sidebar Holder -->
             <nav id="barra">
-                <div id="quitar">
-                    <i class="glyphicon glyphicon-arrow-left"></i>
-                </div>
-
-                <div class="barra-header">
-                    <h3>MENÚ</h3>
-                </div>
-
-                <ul id="lista" class="componentes">
-                    <!--active de bootstrap-->
-                    <li class="active">
-                        <a href="#">Inicio</a>
-                    </li>
-                    <li>
-                        <a href="quien.html">¿Quiénes somos?</a>
-                        <a href="como.html">¿Cómo funciona?</a>
-                        <a href="donacion.html">Donaciones</a>
-                        <a href="contribuir.html">Contribuir con extensión</a>
-                    </li>
-                    <li><a href="#">Extensiones &raquo</a>
-                        <ul id="categorias">
-                            <li>Imágenes</li>
-                            <li>Audio</li>
-                            <li>Video</li>
-                            <li>Texto</li>
-                            <li>Archivos Comprimidos</li>
-                            <li>BBDD</li>
-                            <li>Sistema</li>
-                            <li>Otros</li>
-                            <li>Web</li>
-                        </ul>
-                    </li>
-                </ul>
+              <div id="quitar">
+                  <i class="glyphicon glyphicon-arrow-left"></i>
+              </div>
+              <div class="barra-header">
+                  <h3>MENÚ</h3>
+              </div>
+              <ul id="lista" class="componentes">
+                  <!--active de bootstrap-->
+                  <li class="active">
+                      <a href="#">Inicio</a>
+                  </li>
+                  <li>
+                    <a href="quien.html">¿Quiénes somos?</a>
+                    <a href="como.html">¿Cómo funciona?</a>
+                    <a href="donacion.html">Donaciones</a>
+                    <a href="contribuir.html">Contribuir con extensión</a>
+                  </li>
+                  <li><a href="#">Extensiones &raquo</a>
+                    <ul id="categorias">
+                      <li>Imágenes</li>
+                      <li>Audio</li>
+                      <li>Video</li>
+                      <li>Texto</li>
+                      <li>Archivos Comprimidos</li>
+                      <li>BBDD</li>
+                      <li>Sistema</li>
+                      <li>Otros</li>
+                      <li>Web</li>
+                    </ul>
+                  </li>
+              </ul>
             </nav>
         </div>
+
             <!-- Page Content Holder -->
-            <div id="content">
-                <nav class="navbar navbar-default">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            <button type="button" id="esconder" class="btn btn-info navbar-btn">
-                                <i class="glyphicon glyphicon-align-left"></i>
-                                <span>Menú</span>
-                            </button>
-                        </div>
-                        <!--class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"-->
-						<div class="container-fluid">
-                            <h1 id="tituloCentral">OpenSource</h1>
-							<form>
-							<input type="text" id="busqueda" placeholder="Buscar Extensión..." maxlength="30" onkeyup="buscar(this.value)" autocomplete="off" />
-							</form>
-							<!--
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a href="#">
-                                    <div style="float: left;">
-                                        <img src="./img/cat.png" alt="Catalan" id="lanCat">
-                                    </div>
-                                </a></li>
-                                <li><a href="#">
-                                    <div style="float: left;">
-                                        <img src="img/sp.png" alt="Español" id="lanEs">
-                                    </div>
-                                </a></li>
-                                <li><a href="#">
-                                    <div style="float: left;">
-                                        <img src="img/en.png" alt="English" id="lanEn">
-                                    </div>
-                                </a></li>
-                            </ul>
-							-->
-                        </div>
-                    </div>
-                </nav>
+        <div id="content">
+          <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" id="esconder" class="btn btn-info navbar-btn">
+                  <i class="glyphicon glyphicon-align-left"></i>
+                  <span>Menú</span>
+                </button>
+              </div>
+						   <div class="container-fluid">
+                <h1 id="tituloCentral">OpenSource</h1>
+							  <form>
+							   <input type="text" id="busqueda" placeholder="Buscar Extensión..." maxlength="30" onkeyup="buscar(this.value)" autocomplete="off" />
+							   </form>
                 </div>
-            <div id="contenidoFin" class="container">
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <article>
+        <div id="contenidoFin" class="container">
                 <div><h1>¡TOP 3 EXTENSIONES!</h1></div>
                     <div class="line"></div>
                     <div class="extension">
@@ -122,47 +105,51 @@
                              <span>OpenOffice</span>
                             <img src="img/opof.svg"alt="OpenOffice">
                         </div>
+              </div>
+
+       </article>
+
+       <footer id="myFooter">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-sm-4 myCols">
+                         <h5>Comencemos</h5>
+                         <ul>
+                             <li><a href="index.html">Inicio</a></li>
+                             <li><a href="como.html">Funcionamiento</a></li>
+                             <li><a href="contribuir.html">Formulario</a></li>
+                             <li><a href="donacion.html">Donaciones</a></li>
+
+                         </ul>
                      </div>
+                     <div class="col-sm-4 myCols">
+                         <h5>Sobre nosotros</h5>
+                         <ul>
+                             <li><a href="quien.html">Informacion de la compañia</a></li>
 
-           <footer id="myFooter">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-4 myCols">
-                            <h5>Comencemos</h5>
-                            <ul>
-                                <li><a href="#">Inicio</a></li>
-                                <li><a href="#">Funcionamiento</a></li>
-                                <li><a href="#">Formulario</a></li>
-                                <li><a href="#">Donaciones</a></li>
-
-                            </ul>
-                        </div>
-                        <div class="col-sm-4 myCols">
-                            <h5>Sobre nosotros</h5>
-                            <ul>
-                                <li><a href="#">Informacion de la compañia</a></li>
-                                <li><a href="#">Contacto</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-4 myCols">
-                            <h5>Soporte</h5>
-                            <ul>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">Ayuda</a></li>
-                                <li><a href="#">Foros</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="social-networks">
-                    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="google"><i class="fab fa-google-plus"></i></a>
-                </div>
-                <div class="footer-copyright">
-                    <p>© 2018 Copyright</p>
-                </div>
-            </footer>
+                         </ul>
+                     </div>
+                     <div class="col-sm-4 myCols">
+                         <h5>Soporte</h5>
+                         <ul>
+                             <li><a href="#">FAQ</a></li>
+                             <li><a href="como.html">Ayuda</a></li>
+                         </ul>
+                     </div>
+                 </div>
+             </div>
+             <div class="social-networks">
+               <ul>
+                 <li>Contacto</li>
+               </ul>
+                 <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                 <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                 <a href="#" class="google"><i class="fab fa-google-plus"></i></a>
+             </div>
+             <div class="footer-copyright">
+                 <p>© 2018 Copyright</p>
+             </div>
+         </footer>
 
 
         <!-- Bootstrap Js CDN -->
