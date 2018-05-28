@@ -4,16 +4,32 @@
 
 body {
     font-family: 'PT Serif', serif;
-    background: #fafafa;
-	min-width: 500px;
+}
+/* ---------------------------------------------------
+   Estilo del article
+----------------------------------------------------- */
+article{
+  background-color: #D1B0A0;
+  color: #283149;
+
+}
+a.article, a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+/* ---------------------------------------------------
+   Estilo del header
+----------------------------------------------------- */
+header{
+  color: #283149;
 }
 
 p {
     font-family: 'PT Serif', serif;
-    font-size: 1.1em;
+    font-size: 1.3em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999;
+    color: #283149;
 }
 
 a, a:hover, a:focus {
@@ -54,7 +70,7 @@ a, a:hover, a:focus {
     left: -250px;
     height: 100vh;
     z-index: 999;
-    background: #404B69;
+    background-color: #404B69;
     color: #fff;
     transition: all 0.3s;
     overflow-y: scroll;
@@ -172,6 +188,7 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
+    background: #404B69;
 }
 
 ul.CTAs {
@@ -186,24 +203,11 @@ ul.CTAs a {
     margin-bottom: 5px;
 }
 
-a.article, a.article:hover {
-    background: #6d7fcc !important;
-    color: #fff !important;
-}
 
 #tituloCentral{
     text-align: center;
     font-size: 80px;
     font-weight: bold;
-}
-article{
-  background-color: #94C9A9;
-  color: #41455C;
-
-}
-header{
-  background-color: #2E1F27;
-  color: #94C9A9;
 }
 
 
@@ -236,12 +240,6 @@ textarea{
 }
 
 /* Set black background color, white text and some padding */
-footer {
-    background-color: #2E1F27;
-    color: #DC4D53;
-    padding: 15px;
-}
-
 .blanco{
 	color: white;
 	text-align: left;
@@ -249,17 +247,21 @@ footer {
 	font-size: 16px;
 }
 
-/*Footer css  */
+
+/* ---------------------------------------------------
+   Estilo del footer
+----------------------------------------------------- */
 
 #myFooter {
-    background-color: #404B69 ;
-    color:white;
+  background-color: #283149;
+  color: white;
 }
 
 #myFooter .footer-copyright{
-    background-color: #404B69;
-    padding-top:3px;
-    padding-bottom:3px;
+  background-color: #283149 ;
+  color: #white;
+    padding-top:2px;
+    padding-bottom:2px;
     text-align: center;
 }
 
@@ -283,7 +285,7 @@ footer {
 }
 
 #myFooter a{
-    color:#d2d1d1;
+    color:white;
     text-decoration: none;
 }
 
@@ -328,60 +330,15 @@ footer {
     color: #00aced;
 }
 
-/*Boton subida al inicio*/
-.ir-arriba{
-    display: none;
-    padding: 20px;
-    background: #283149;
-    font-size:20px ;
-    color: white;
-    cursor: pointer;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-}
 
-.extensionBien{
-    background-color: aquamarine;
-    color: black;
-    border-style: solid;
+@media screen and (max-width: 767px){
+    #myFooter {
+        text-align: center;
+    }
 }
-
-#categorias li{
-    font-size: 18px;
-    padding-bottom: 20px;
-}
-
-#categorias li:hover{
-    color: #404B69;
-    background: #fff;
-}
-
-input[type=text] {
-    width: 215px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 18px;
-    background-color: white;
-    background-image: url('../img/searchicon.png');
-    background-position: 10px 10px; 
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 37px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-}
-
-input[type=text]:focus {
-    width: 100%;
-}
-
 
 /* On small screens, set height to 'auto' for sidenav and grid */
 @media screen and (max-width: 767px) {
-	#myFooter {
-        text-align: center;
-    }
     .sidenav {
         height: auto;
         padding: 15px;
@@ -396,10 +353,4 @@ input[type=text]:focus {
 	#ocultar{
 		color:black;
 	}
-	#tituloCentral{
-    font-size: 60px;
-	}
-	input[type=text]:focus {
-    width: 70%;
-}
 }
