@@ -1,3 +1,4 @@
+//Funcion encargada efecto de oscurecer y mostrar menu
 $(document).ready(function () {
     $('#quitar, .oscurecer').on('click', function () {
         $('#barra').removeClass('active');
@@ -12,6 +13,7 @@ $(document).ready(function () {
     });
 });
 
+//Funcion encargada ascension con el tiempo de subida
 $(document).ready(function(){
     $('.ir-arriba').click(function () {
         $('body, html').animate({
@@ -31,22 +33,17 @@ function buscar(busqueda) {
 	console.log(busqueda);
     if (busqueda.length == 0) { 
 		location.reload(true);
-        document.getElementById("contenidoFin").innerHTML = "<h2>Nada encontrado</h2>";
     } 
 	else{
-		console.log("hola1");
+		document.getElementById("contenidoFin").innerHTML = '<h1>Buscando...</h1>';
         var xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-			console.log("hola2");
 			var response = JSON.parse( xmlhttp.responseText );
 			console.log(response);
             var output = "<h1>" + "EXTENSIONES QUE CONTIENEN: " + busqueda.toUpperCase() + "</h1>";
             //recorremos cada extension
-			if (response == null){
-				output = "<h2>" + "NINGUNA EXTENSIÓN CONTIENE " + busqueda.toUpperCase() + "...</h2>";
-			}
-			else{
+			if (typeof response != "undefined" && response != null && response.length != null && response.length > 0){
 				var aux = 0;
 				for (extension in response ) {
 					output += '<div class="extension">'
@@ -54,12 +51,17 @@ function buscar(busqueda) {
 					output += "<p>" + response[aux].descripcion + "</p>";
 					output += "<span>" + response[aux].nombre_programa + "</span>";
 					output += '<p><a target="_blank" href="' + response[aux].link  + '">Descargar '+response[aux].nombre_programa+'</a></p>';
-					output += '</div>'
+					output += '</div>';
+					output += '<div class="line"></div>';
 					aux+=1;
 				}
-		}}
-            //Actualizamos el HTML del elemento con id="#response-container"
+			}
+			else{
+				output = "<h2>" + "NINGUNA EXTENSIÓN CONTIENE " + busqueda.toUpperCase() + "...</h2>";
+		}
+		//Actualizamos el HTML del elemento con id="#contenidoFin"
             document.getElementById("contenidoFin").innerHTML = output;
+		} 
 		}}
     xmlhttp.open("GET", "php/jsonExtensionNombre.php?name=" + busqueda, true);
     xmlhttp.send();

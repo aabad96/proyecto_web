@@ -329,12 +329,54 @@ textarea{
     color: #00aced;
 }
 
-
-@media screen and (max-width: 767px){
-    #myFooter {
-        text-align: center;
-    }
+/*Boton subida al inicio*/
+.ir-arriba{
+    display: none;
+    padding: 20px;
+    background: #283149;
+    font-size:20px ;
+    color: white;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
 }
+
+.extensionBien{
+    background-color: aquamarine;
+    color: black;
+    border-style: solid;
+}
+
+#categorias li{
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
+#categorias li:hover{
+    color: #404B69;
+    background: #fff;
+}
+
+input[type=text] {
+    width: 215px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+    background-color: white;
+    background-image: url('../img/searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 37px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+
 
 /* On small screens, set height to 'auto' for sidenav and grid */
 @media screen and (max-width: 767px) {
@@ -352,4 +394,10 @@ textarea{
 	#ocultar{
 		color:black;
 	}
+	input[type=text]:focus {
+		width: 70%;
+	}
+	#myFooter {
+        text-align: center;
+    }
 }
