@@ -54,7 +54,8 @@ function buscar(busqueda) {
 					output += "<p>" + response[aux].descripcion + "</p>";
 					output += "<span>" + response[aux].nombre_programa + "</span>";
 					output += '<p><a target="_blank" href="' + response[aux].link  + '">Descargar '+response[aux].nombre_programa+'</a></p>';
-					output += '</div>'
+					output += '</div>';
+					output += '<div class="line"></div>';
 					aux+=1;
 				}
 		}}
