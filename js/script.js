@@ -31,9 +31,9 @@ $(document).ready(function(){
 
 function buscar(busqueda) {
 	console.log(busqueda);
-    if (busqueda.length == 0) { 
+    if (busqueda.length == 0) {
 		location.reload(true);
-    } 
+    }
 	else{
 		document.getElementById("contenidoFin").innerHTML = '<h1>Buscando...</h1>';
         var xmlhttp = new XMLHttpRequest();
@@ -61,8 +61,26 @@ function buscar(busqueda) {
 		}
 		//Actualizamos el HTML del elemento con id="#contenidoFin"
             document.getElementById("contenidoFin").innerHTML = output;
-		} 
+		}
 		}}
     xmlhttp.open("GET", "php/jsonExtensionNombre.php?name=" + busqueda, true);
     xmlhttp.send();
+}
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+// Get the modal
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
