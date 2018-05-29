@@ -149,17 +149,6 @@ span.psw {
     to {transform: scale(1)}
 }
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
-}
-
 /* ---------------------------------------------------
    Estilo del body
 ----------------------------------------------------- */
@@ -574,5 +563,17 @@ input[type=text]:focus {
 	}
 	#myFooter {
         text-align: center;
+    }
+  #tituloCentral{
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+    }
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
     }
 }
