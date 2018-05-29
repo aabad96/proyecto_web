@@ -191,6 +191,7 @@ p {
     font-weight: 300;
     line-height: 1.7em;
     color: #283149;
+    text-align: justify;
 }
 
 a, a:hover, a:focus {
