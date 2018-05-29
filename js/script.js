@@ -50,6 +50,7 @@ function buscar(busqueda) {
 					output += "<h2>."+response[aux].nombre + "</h2>";
 					output += "<p>" + response[aux].descripcion + "</p>";
 					output += "<span>" + response[aux].nombre_programa + "</span>";
+					output += '<img src="img/'+ response[aux].idPrograma +'.png" alt="Programa: '+response[aux].nombre_programa+ '">'
 					output += '<p><a target="_blank" href="' + response[aux].link  + '">Descargar '+response[aux].nombre_programa+'</a></p>';
 					output += '</div>';
 					output += '<div class="line"></div>';

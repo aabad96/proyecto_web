@@ -26,7 +26,7 @@
 	while($row = mysqli_fetch_assoc($result)) {
 		$json = $json.'{"id":'.$row["id"].',"nombre":'.'"'.$row["nombre"].'"'.',
 		"descripcion":'.'"'.$row["descripcion"].'"'.',"nombre_programa":'.'"'.$row["programa"].'"'.',"link":'.'"'.$row["link"].'"'.'
-		,"idCategoria":'.$row["idCategoria"].'},';
+		,"idCategoria":'.$row["idCategoria"].',"idPrograma":'.'"'.$row["idprograma"].'"'.'},';
 	}
 	$json = substr($json, 0, -1)."]"; // se quita la ?ltima coma y se cierra el array
 
