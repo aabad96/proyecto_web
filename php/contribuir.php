@@ -16,6 +16,10 @@
 ?>
 
 <?php
+if(isset($_POST['nombre'])) { 
+    // check if the username has been set
+	$nombre = $_POST["nombre"];
+}
 
 if(isset($_POST['email'])) { 
     // check if the username has been set
@@ -30,14 +34,13 @@ if(isset($_POST['comentario'])) {
 	$comentario = $_POST["comentario"];
 }
 
+
 $tablename ="sugerencia";
-        //Encriptar password
         $query  = "INSERT INTO `$tablename` (";
-		$query .= "  `email`, `tipo`,`comentario`";
+		$query .= "  `email`, `tipo`,`comentario`, `nombre`";
 		$query .= ") VALUES (";
-		$query .= " '$email', '$tipo', '$comentario'";
+		$query .= " '$email', '$tipo', '$comentario','$nombre'";
 		$query .= ")";
-	
 		$result = mysqli_query($connection, $query);
 
 			if ($result) {
