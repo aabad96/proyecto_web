@@ -81,7 +81,7 @@
               </header>
               <article>
 <div id="contenidoFin" class="container">
-        <form action="/signup" method="post">
+        <form action="php/contribuir.php" method="post">
           <p>FORMULARIO:</p>
             <p>
                 <label>Email</label><br>
@@ -89,7 +89,7 @@
             </p>
             <p>
                 <label>Tipo Extensión</label><br>
-                <select>
+                <select name="tipo">
                     <option disabled> Selecciona un tipo de extension</option>
                     <option>Imágenes</option>
                     <option>Audio</option>
@@ -104,16 +104,16 @@
             </p>
             <p>
                 <label>Describa la extensión</label><br>
-                <p id="nuevoExtension"><textarea name="nuevoEx" required placeholder="Comparte todos los datos que conozcas de la extensión que quieres que incluyamos en nuestra web..."></textarea></p>
+                <p id="nuevoExtension"><textarea name="comentario" required placeholder="Comparte todos los datos que conozcas de la extensión que quieres que incluyamos en nuestra web..."></textarea></p>
             </p>
             <p>
                 <label>
-                    <input type="checkbox" value="terms">
+                    <input type="checkbox" value="terms" required>
                     Estoy de acuerdo con los <a href="/terms">términos y condiciones</a>
                 </label>
             </p>
             <p>
-                <button>Enviar</button>
+                <input type="submit" name="submit" value="Submit" />
                 <button type="reset">Limpiar Formulario</button>
             </p>
         </form>
