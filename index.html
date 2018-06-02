@@ -100,7 +100,7 @@
                 <button id="registrarse" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Registrarse</button>
                 <div id="id02" class="modal">
                   <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-                  <form class="modal-content" action="/action_page.php">
+                  <form class="modal-content" action="php/registrarUsuario.php" method="post">
                     <div class="containerl">
                       <h1>Registrarse</h1>
                       <p>Rellena los campos para que te puedas registrar</p>
@@ -109,10 +109,10 @@
                       <input class="email" placeholder="Enter Email" name="email" required>
 
                       <label for="psw"><b>Contraseña</b></label>
-                      <input class="password" type="password" placeholder="Enter Password" name="psw" required>
+                      <input class="password" type="password" placeholder="Enter Password" name="pass" required>
 
                       <label for="psw-repeat"><b>Confirmar Contraseña</b></label>
-                      <input class="password" type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                      <input class="password" type="password" placeholder="Repeat Password" name="pass2" required>
 
       <p>Estas de acuerdo con <a href="terminos.html" style="color:dodgerblue">Nuestros terminos y Politicas</a>.</p>
 
