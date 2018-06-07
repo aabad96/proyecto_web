@@ -87,7 +87,28 @@
 <div id="contenidoFin" class="container">
   <h1>Donaciones:</h1>
   <p>Estas donaciones seran para mejorar la pagina web</p>
-  <img id="donar" src="img/donacion.png" alt="Donar">
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+      <!-- Identify your business so that you can collect the payments. -->
+      <input type="hidden" name="business"
+          value="opensourceuem@gmail.com">
+
+      <!-- Specify a Donate button. -->
+      <input type="hidden" name="cmd" value="_donations">
+
+      <!-- Specify details about the contribution -->
+      <input type="hidden" name="item_name" value="Friends of the Park">
+      <input type="hidden" name="item_number" value="Fall Cleanup Campaign">
+      <input type="hidden" name="currency_code" value="USD">
+
+      <!-- Display the payment button. -->
+      <input type="image" name="submit"
+      src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif"
+      alt="Donate">
+      <img alt="" width="1" height="1"
+      src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+
+  </form>
+<!--  <img id="donar" src="img/donacion.png" alt="Donar">-->
     </div>
 
   </article>
@@ -123,7 +144,7 @@
         <div class="social-networks">
 
               <h5>Contacto</h5>
-          
+
             <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
             <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
             <a href="#" class="google"><i class="fab fa-google-plus"></i></a>
