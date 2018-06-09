@@ -4,6 +4,7 @@
 /* ---------------------------------------------------
    Estilo del login
 ----------------------------------------------------- */
+
 /* Full-width input fields */
 .password {
     width: 100%;
@@ -45,7 +46,7 @@ button {
   background-color: #283149;
   color: white;
   padding: 14px 20px;
-  margin: 10px 0;
+  margin: 8px 0;
   border: none;
   cursor: pointer;
   width: 100%;
@@ -70,9 +71,19 @@ button:hover, #login:hover {
 .cancelbtn {
     width: auto;
     padding: 10px 18px;
-    background-color: #f44336;
+    background-color: #283149;
+    color: white;
 }
+.entrar{
+  background-color: #283149!important;
+  color: white !important;
 
+}
+.derecha{
+  padding: 0 auto !important;
+  margin-right: 10px !important;
+  float: right;
+}
 /* Center the image and position the close button */
 .imgcontainer {
     text-align: center;
@@ -86,7 +97,9 @@ img.avatar {
 }
 
 .containerl {
+  background-color:#f1f1f1
     padding: 16px;
+
 }
 
 span.psw {
@@ -514,7 +527,7 @@ textarea{
 
 #categorias li{
     font-size: 18px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 #categorias li:hover{

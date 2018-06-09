@@ -69,9 +69,8 @@
               </div>
 						   <div class="container-fluid">
                 <h1 id="tituloCentral">OpenSource</h1>
-
                 <!-- login-->
-                <button id="login" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Entrar</button>
+                <button class="entrar derecha" id="login" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Entrar</button>
                 <div id="id01" class="modal">
                   <form class="modal-content animate" action="php/loginUsuario.php" method="post">
                     <div class="imgcontainer">
@@ -85,16 +84,16 @@
                       <label for="psw"><b>Contraseña</b></label>
                       <input class="password" type="password" placeholder="Enter Password" name="pass" required>
 
-                      <button type="submit">Login</button>
+                      <button class ="entrar" type="submit">Login</button>
                     </div>
 
-                    <div class="containerl" style="background-color:#f1f1f1">
+                    <div class="containerl">
                       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
                     </div>
                   </form>
                 </div>
                 <!-- Registrar-->
-                <button id="registrarse" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Registrarse</button>
+                <button class="derecha" id="registrarse" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Registrarse</button>
                 <div id="id02" class="modal">
                   <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
                   <form class="modal-content" action="php/registrarUsuario.php" method="post">
@@ -108,13 +107,10 @@
                       <label for="psw"><b>Contraseña</b></label>
                       <input class="password" type="password" placeholder="Enter Password" name="pass" required>
 
-                      <label for="psw-repeat"><b>Confirmar Contraseña</b></label>
-                      <input class="password" type="password" placeholder="Repeat Password" name="pass2" required>
-
       <p>Estas de acuerdo con <a href="terminos.html" style="color:dodgerblue">Nuestros terminos y Politicas</a>.</p>
 
       <div class="clearfix">
-          <button type="submit" class="containerl">Registrarse</button>
+          <button class="entrar" type="submit" class="containerl">Registrarse</button>
         <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancelar</button>
 
       </div>
@@ -124,7 +120,7 @@
 
                </div>
 							  <form>
-							   <input type="text" id="busqueda" placeholder="Buscar Extensión..." maxlength="30" onkeyup="buscar(this.value)" autocomplete="off" />
+							   <input class="derecha" type="text" id="busqueda" placeholder="Buscar Extensión..." maxlength="30" onkeyup="buscar(this.value)" autocomplete="off" />
 							   </form>
 
             </div>
