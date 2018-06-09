@@ -21,16 +21,21 @@ var obtenerDatos = function( id ){
 
             // Analizaos el responseText que contendrá el JSON enviado desde el servidor
             var response = JSON.parse( ajax_request.responseText );
-
-            var output = "<h1>" + "EXTENSIONES" + "</h1>";
+			
+			var categorias =["Imágenes","Audio","Video","Texto","Archivos Comprimidos", "Bases de datos", "Archivos de sistema","Otros Archivos","Web"];
+            
+			var categoriaFin = categorias[id];
+			var output = "<h1>" + "EXTENSIONES RELACIONADAS CON " +'"'+categoriaFin.toUpperCase()+'"' +  "</h1>";
             //recorremos cada extension
             var aux = 0;
+			
+			
             for (extension in response ) {
                 output += '<div class="extension">'
                 output += "<h2>."+response[aux].nombre + "</h2>";
                 output += "<p>" + response[aux].descripcion + "</p>";
                 output += "<span>" + response[aux].nombre_programa + "</span>";
-				output += '<img src="img/'+ response[aux].idPrograma +'.png" alt="Programa: '+response[aux].nombre_programa+ '">'
+				output += ' <a target="_blank" href="' + response[aux].link + '"><img class="zoom" src="img/'+ response[aux].idPrograma +'.png" alt="Programa: '+response[aux].nombre_programa+ '"></a>'
                 output += '<p><a target="_blank" href="' + response[aux].link  + '">Descargar '+response[aux].nombre_programa+'</a></p>';
                 output += '</div>'
 				output += '<div class="line"></div>';

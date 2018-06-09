@@ -22,7 +22,7 @@ function find_user_by_username($email, $password, $connection) {
 		$safe_email = mysqli_real_escape_string($connection, $email);
 	   	
     
-		$query  = "SELECT pass ";
+		$query  = "SELECT pass as secreto ";
 		$query .= "FROM usuario ";
 		$query .= "WHERE email = '$email'";
 		echo "$query <br>";
@@ -32,6 +32,7 @@ function find_user_by_username($email, $password, $connection) {
 		}
 		
 		if($user = mysqli_fetch_assoc($user_set)) {
+			print_r($user);
 			return $user;
 		} else {
 			return null;
@@ -43,7 +44,7 @@ function attempt_login($email, $password, $connection) {
 		if ($user) {
 			
 			//user encontrado
-			
+			echo "Hay Usuario ";
 			return $user;
     }
 			
@@ -63,6 +64,7 @@ if(isset($_POST['email'])) {
 }
 if(isset($_POST['pass'])) { 
 	$password = $_POST["pass"];
+	echo "Contraseña recogida: ".$password;
 }
 
 
@@ -70,18 +72,24 @@ $found_user = attempt_login($email, $password, $connection);
 
     if ($found_user) {
       // Success
-			if(password_verify($password,$found_user["pass"])){
-                header("Location: " . "index.html");
-            }
-            else{
-                echo($email);
-				echo($password);
-            }
-		
-     
+				echo "\n";
+				echo "Email: ".$email;
+				echo "\n";
+				echo "Pass: ".$password;
+				echo "\n";
+				$codigo =$found_user["secreto"];
+				echo "\n";
+				echo "Codigo: ".$codigo;
+			if (password_verify($password, $codigo)){
+				echo 'Password is valid!';
+				header("Location: "/"index.html");
+			} else {
+				echo 'Invalid password.';
+			}
+			
     } else {
       // Failure
-	  header("Location: " . "index.html");
+	  header("/index.html");
     }
 ?>
 

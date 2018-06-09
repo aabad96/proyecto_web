@@ -62,7 +62,9 @@ if(isset($_POST['email'])) {
 
 if(isset($_POST['pass'])) { 
     // check if the email has been set
-	$password = $_POST["pass"];
+	$password_aux = $_POST["pass"];
+	$password= password_hash($password_aux, PASSWORD_BCRYPT)."\n";
+	
 }
 
 $found_user = attempt_login($email, $connection);
