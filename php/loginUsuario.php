@@ -25,7 +25,7 @@ function find_user_by_username($email, $password, $connection) {
 		$query  = "SELECT * ";
 		$query .= "FROM usuario ";
 		$query .= "WHERE email = '$email'";
-		echo "$query <br>";
+		//echo "$query <br>";
 		$user_set = mysqli_query($connection, $query);
 		if (!$user_set) {
 			die("Database query failed.");
@@ -34,7 +34,6 @@ function find_user_by_username($email, $password, $connection) {
 		
 		
 		if($user = mysqli_fetch_row($user_set)) {
-			print_r($user);
 			return $user;
 		} else {
 			return null;
@@ -46,16 +45,16 @@ function attempt_login($email, $password, $connection) {
 		if ($user) {
 
       // Success
-				echo "\n";
-				echo "Email: ".$email;
-				echo "\n";
-				echo "Pass: ".$password;
-				echo "\n";
-				echo "\n";
-				echo "Codigo Nuevo: ".$user[2];
+				//echo "\n";
+				//echo "Email: ".$email;
+				//echo "\n";
+				//echo "Pass: ".$password;
+				//echo "\n";
+				//echo "\n";
+				//echo "Codigo Nuevo: ".$user[2];
 				//echo "Codigo Nuevo 2: ".$user['pass'];
-				echo strlen($user[2]);
-				$codigo= substr($user[2],0,-1);
+				//echo strlen($user[2]);
+				$codigo= $user[2];
 			if (password_verify($password, $codigo)){
 				return true;
 			} else {
@@ -72,20 +71,25 @@ function attempt_login($email, $password, $connection) {
 ?>
 <?php
 if(isset($_POST['email'])) { 
-	$email = $_REQUEST['email'];
+	$email = $_POST['email'];
 }
 if(isset($_POST['pass'])) { 
-	$password = $_REQUEST['pass'];
-	echo "Contraseña recogida: ".$password;
+	$password = $_POST['pass'];
+	//echo "Contraseña recogida: ".$password;
 }
 
 
 $found_user = attempt_login($email, "".$password, $connection);
 if($found_user){
-	echo 'Password is valid!';
-	header("Location: ../index.html");
+	  echo '<script>
+                alert("Bienvenido de nuevo '.$email.'");
+                window.location= "../index.html"
+    </script>';
 } else {
-	echo 'Invalid password.';
+	 echo "<script>
+                alert('Usuario o contraseña incorrectos');
+                window.location= '../index.html'
+    </script>";
 }
     // if ($found_user) {
      // Success

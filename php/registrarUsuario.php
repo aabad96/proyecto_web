@@ -22,13 +22,13 @@ function find_user_by_username($email,  $connection) {
 		$query  = "SELECT * ";
 		$query .= "FROM usuario ";
 		$query .= "WHERE email = '$email'";
-		echo "$query <br>";
+		//echo "$query <br>";
 		$user_set = mysqli_query($connection, $query);
 		if (!$user_set) {
 			die("Database query failed.");
 		}
 		
-		if($user = mysqli_fetch_assoc($user_set)) {
+		if($user = mysqli_fetch_row($user_set)) {
 			return $user;
 		} else {
 			return null;
@@ -36,17 +36,22 @@ function find_user_by_username($email,  $connection) {
 	}
 
 function attempt_login($email, $connection) {
-		$email = find_user_by_username($email, $connection);
+		$aux = find_user_by_username($email, $connection);
+		$email = $aux[1];
 		if ($email) {
 			
-			//user encontrado
+			 echo '<script>
+                alert("El email '.$email.' ya está dado de alta en el sistema.");
+                window.location= "../index.html"
+    </script>';
+		die("El usuario ya existe.");
 			
-			return $email;
+			
     }
 		 else {
 			// user not found
 			//echo "Usuario no encontrado";
-			return false;
+			return $email;
 		}
 	}
 	
@@ -77,9 +82,16 @@ $tablename ="usuario";
 		$result = mysqli_query($connection, $query);
 
 			if ($result) {
-				echo "Gracias por tu colaboración '$email'";
+				echo '<script>
+                alert("Gracias por registrarte '.$email.'");
+                window.location= "../index.html"
+				</script>';
 			} else {
-				die("Database query failed. " . mysqli_error($connection));
+				echo '<script>
+                alert("Error con la Base de Datos, disculpe las molestias '.$email.'");
+                window.location= "../index.html"
+    </script>';
+				die("Error en la base de datos. " . mysqli_error($connection));
 	}
 ?>
 <?php
