@@ -63,7 +63,7 @@ if(isset($_POST['email'])) {
 if(isset($_POST['pass'])) { 
     // check if the email has been set
 	$password_aux = $_POST["pass"];
-	$password= password_hash($password_aux, PASSWORD_BCRYPT)."\n";
+	$password= password_hash($password_aux, PASSWORD_BCRYPT);
 	
 }
 
