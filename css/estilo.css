@@ -3,6 +3,13 @@
 .clickaqui{
   text-decoration: underline;
 }
+.formas{
+  font-family: 'PT Serif', serif !important;
+  font-size: 1.3em !important;
+  font-weight: 300 !important;
+  line-height: 1.7em !important;
+  color: #283149 !important;
+}
 /* ---------------------------------------------------
    Estilo del login
 ----------------------------------------------------- */
