@@ -8,20 +8,20 @@
   $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
   // Test if connection succeeded
   if(mysqli_connect_errno()) {
-    die("La conexión con la BBDD ha fallado: " . 
-         mysqli_connect_error() . 
+    die("La conexión con la BBDD ha fallado: " .
+         mysqli_connect_error() .
          " (" . mysqli_connect_errno() . ")"
     );
   }
 ?>
 
-<?php 
+<?php
 function find_user_by_username($email, $password, $connection) {
-		
-		
+
+
 		$safe_email = mysqli_real_escape_string($connection, $email);
-	   	
-    
+
+
 		$query  = "SELECT * ";
 		$query .= "FROM usuario ";
 		$query .= "WHERE email = '$email'";
@@ -30,9 +30,9 @@ function find_user_by_username($email, $password, $connection) {
 		if (!$user_set) {
 			die("Database query failed.");
 		}
-		
-		
-		
+
+
+
 		if($user = mysqli_fetch_row($user_set)) {
 			return $user;
 		} else {
@@ -43,37 +43,26 @@ function find_user_by_username($email, $password, $connection) {
 function attempt_login($email, $password, $connection) {
 		$user = find_user_by_username($email,$password, $connection);
 		if ($user) {
-
-      // Success
-				//echo "\n";
-				//echo "Email: ".$email;
-				//echo "\n";
-				//echo "Pass: ".$password;
-				//echo "\n";
-				//echo "\n";
-				//echo "Codigo Nuevo: ".$user[2];
-				//echo "Codigo Nuevo 2: ".$user['pass'];
-				//echo strlen($user[2]);
 				$codigo= $user[2];
 			if (password_verify($password, $codigo)){
 				return true;
 			} else {
 				return false;
 			}
-			
+
 
 		}
-	
+
 }
-	
-	
-	
+
+
+
 ?>
 <?php
-if(isset($_POST['email'])) { 
+if(isset($_POST['email'])) {
 	$email = $_POST['email'];
 }
-if(isset($_POST['pass'])) { 
+if(isset($_POST['pass'])) {
 	$password = $_POST['pass'];
 	//echo "Contraseña recogida: ".$password;
 }
@@ -91,29 +80,6 @@ if($found_user){
                 window.location= '../index.html'
     </script>";
 }
-    // if ($found_user) {
-     // Success
-				// echo "\n";
-				// echo "Email: ".$email;
-				// echo "\n";
-				// echo "Pass: ".$password;
-				// echo "\n";
-				// $keys = array_keys($found_user);
-				// $codigo1 = array_values($found_user)[0];
-				// $codigo =$found_user[$keys[0]];
-				// echo "\n";
-				// echo "Codigo Nuevo: ".$codigo1;
-			// if (password_verify($password, $codigo1)){
-				// echo 'Password is valid!';
-				// header("Location: "/"index.html");
-			// } else {
-				// echo 'Invalid password.';
-			// }
-			
-    // } else {
-      //Failure
-	  // header("/index.html");
-    // }
 ?>
 
 
