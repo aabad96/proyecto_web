@@ -1,6 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=PT+Serif');
-
+.clickaqui{
+  text-decoration: underline;
+}
 /* ---------------------------------------------------
    Estilo del login
 ----------------------------------------------------- */
